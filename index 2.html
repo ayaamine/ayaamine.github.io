@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>30MFF</title>
+    <link rel="stylesheet" href="styles.css">
+
+</html>
+</head>
+   <style>
+     ul li {
+      list-style-type: none;
+    }
+   </style>
+<body>
+  <!--This is the navigation bar-->
+
+  <ul>
+    <li><a class="active" href="index.html">Home</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <ul>
+        <li style="float:right"> <a href="index.html"> <img src="./images copy/White with Colorful Triangles Internet Logo.jpg"  style=" width: 50px;height:50px;overflow: hidden;margin-top: -5px;"> </a></li>
+      </ul>
+
+      
+      <!--section 1-->
+      <div class="container">
+        <!--background image-->
+        <img src="./images copy/abu dhabi.png" class="image">
+        <div class="overlay">
+          <div style="display: flex; position: absolute; top:50%; left:50%; align-items: center;  transform: translate(-50%, -50%);">
+            <!--title and text-->
+            <h1>Abu Dhabi</h1>
+          <p>A preview of what you'll discover!</p>
+          </div>
+      </div>
+
+
+      <!--This is the video-->
+      <div id="vid" style=" position:relative; margin-top: 5%">
+        <div id="vid" style=" position:relative; margin-top: 5%">
+          <iframe width="100%" height="850px"src="https://www.youtube.com/embed/SmWNMwE8emY?controls=0&autoplay=1" frameborder="0" allow="autoplay"></iframe>
+
+       <!--button to move to the next section-->
+        <button class="button" style="position:absolute; bottom: 0;" onClick="document.getElementById('slide').scrollIntoView();"><span>More Landscapes</span></button>
+      </div>
+
+      <!--abu dhabi carousel-->
+      <div class="slideshow-container" id="slide">
+      <div class="slides">
+        
+         <img src="images copy/2.png" style="width:100%">
+         <div class="slideshow-overlay">
+         <div style="display: flex; position: absolute; top:50%; left:40%; align-items: center;  transform: translate(-50%, -50%);">
+       </div>
+     </div>
+       </div>
+       
+       <div class="slides">
+         
+         <img src="images copy/7.png" style="width:100%">
+         <div class="slideshow-overlay">
+         <div style="display: flex; position: absolute; top:50%; left:40%; align-items: center;  transform: translate(-50%, -50%);">
+        
+       </div>
+     </div>
+       </div>
+       
+       <div class="slides">
+        
+         <img src="images copy/6.png" style="width:100%">
+         <div class="slideshow-overlay">
+         <div style="display: flex; position: absolute; top:50%; left:40%; align-items: center;  transform: translate(-50%, -50%);">
+       </div>      </div>
+       </div>
+         
+
+      <!--next and prev button to move the slideshow-->
+      <a class="next" onclick="next(1)">❯</a>
+      <a class="prev" onclick="next(-1)">❮</a>
+         </div>
+        
+        <!--enable and disable images based on which one on display in the slideshow-->
+        <script>
+        let index = 1;
+        move(index);
+        function next(n) {move(index += n);}
+        
+        function move(n) {
+          let i;
+          let slides = document.getElementsByClassName("slides");
+          if (n > slides.length) {index = 1}    
+          if (n < 1) {index = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          slides[index-1].style.display = "block";  
+        }
+        </script>
+
+
+        <!--Here is the footer-->
+      <div class="footer">
+        <p>© 2022 Abu Dhabi</p>
+    </div>
+</body>
+</html>
+
+
+
+
+
+    
