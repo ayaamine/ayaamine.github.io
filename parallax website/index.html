@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax scrolling website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+   
+    <header>
+        <a href="#" class="logo">M&ME</a>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Apply</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src="m2022/stars.png" id="stars">
+        <img src="m2022/moon.png" id="moon">
+        <img src="m2022/mountains_behind.png" id="mountains_behind">
+        <h2 id="text">Moon Trip</h2>
+        <a href="#sec" id="btn">Explore</a>
+        <img src="m2022/mountains_front.png" id="mountains_front">
+
+
+    </section>
+    <div class="sec" id="sec">
+        <h2>A trip to the moon ?</h2>
+        <p>A new era of space exploration — returning humans to the Moon and sending the first humans to Mars — requires astronauts. <br><br>And so NASA has opened the doors to applications from would-be Artemis astronauts that they can send to the Moon by 2024.<br><br>
+            NASA is accepting applications between March 2 and March 31. But aside from an undying love for space, applicants have to fulfill two crucial requirements. To qualify, you must:<br><br>
+
+            Be a United States citizen.<br><br>
+            Have a graduate degree in a STEM field.<br><br>
+            If you qualify, then you can apply. But know that rigorous tests lie ahead: As part of the application process, candidates undergo a two-hour online assessment, in addition to a long-duration spaceflight physical test.<br><br>
+            
+            The astronaut candidates will be selected by mid-2021, when they will begin their training program for Artemis — and being sent to the Moon.<br><br></p>
+    </div>
+    <script>
+        let stars = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let mountains_behind = document.getElementById('mountains_behind');
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+        let mountains_front = document.getElementById('mountains_front');
+        let header = document.querySelector('header')
+
+        window.addEventListener('scroll',function()
+        {
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 + 'px';
+            moon.style.top = value * 1.05 + 'px'
+            mountains_behind.style.top = value * 0.5 + 'px'
+            mountains_front.style.top = value * 0 + 'px'
+            text.style.marginRight = value * 4 + 'px'
+            text.style.marginTop = value * 1.5 + 'px'
+            btn.style.marginTop = value * 1.5 + 'px'
+            btn.style.marginTop = value * 1.5 + 'px'
+            header.style.top = value * 0.5 + 'px'
+
+
+
+
+
+
+
+        })
+
+
+
+    </script>
+
+    
+</body>
+</html>
